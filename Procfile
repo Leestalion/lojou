@@ -1,1 +1,1 @@
-web: sh setup.sh && gunicorn wsgi:app.py && streamlit run dashboard.py
+web: gunicorn wsgi:app.py && sh setup.sh && streamlit run dashboard.py
