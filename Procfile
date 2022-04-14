@@ -1,0 +1,1 @@
+web: sh setup.sh && gunicorn wsgi:app.py && streamlit run dashboard.py
