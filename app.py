@@ -1,4 +1,5 @@
 
+import json
 from Utils.conf import path_pipeline_obj,threshold
 import pandas as pd
 from Utils.model import PipelinePredictor
@@ -8,6 +9,10 @@ import numpy as np
 
 # App config.
 app = Flask(__name__)
+
+@app.route('/ping')
+def ping():
+    return jsonify("pong"), 200
 
 @app.route('/api/', methods=['POST'])
 def makecalc():
